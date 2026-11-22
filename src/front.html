@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -49,6 +49,14 @@
   .n { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 50%;
     background: var(--red); color: #fff; font-size: 9.5px; font-weight: 800; flex: none; }
   .reg { color: #fff; padding: 0 4px; border-radius: 2px; font-size: 9px; }
+  .tag { font-size: 8.5px; font-weight: 800; padding: 0 4px; border-radius: 2px; line-height: 13px; letter-spacing: .02em; }
+  .t-off { background: #fde9a8; color: #6b4e00; border: 1px solid #c9a227; }
+  .t-con { background: #d8efd9; color: #1d5e25; border: 1px solid #3d8b45; }
+  .t-clm { background: #fbe0e0; color: #8b1a1a; border: 1px solid #c8102e; }
+  .t-rep { background: #e6e9ee; color: #374151; border: 1px solid #8a94a3; }
+  .c { position: relative; }
+  .c p em.s { font-style: normal; color: #6b7280; font-size: 9px; font-weight: 600; }
+  .legend { display: flex; flex-wrap: wrap; gap: 3px 8px; font-size: 9px; color: var(--muted); margin-top: 3px; align-items: center; }
   .src { margin-left: auto; font-weight: 600; font-size: 9px; color: #6b7280; }
   .lead h2 { font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 28px; line-height: 1.02; margin: 2px 8px 2px; letter-spacing: -.3px; }
   .lead p { font-size: 12px; line-height: 1.3; margin: 0 8px; }
@@ -69,7 +77,7 @@
   .hd { font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 13px; margin-bottom: 2px; }
   .hd span { font-family: "Segoe UI"; font-weight: 400; font-size: 10px; color: var(--muted); }
   .briefs { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: repeat(9, auto); grid-auto-flow: column; column-gap: 12px; }
-  .briefs div { font-size: 10.2px; line-height: 1.32; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+  .briefs div { font-size: 10.2px; line-height: 1.28; white-space: nowrap; overflow: hidden; text-overflow: clip; }
   .briefs i { font-style: normal; display: inline-block; width: 17px; font-weight: 800; color: var(--red); }
   .briefs b { font-weight: 700; }
   .briefs em { font-style: normal; color: #6b7280; font-size: 9px; }
@@ -82,10 +90,10 @@
 </head>
 <body>
 
-<div class="top"><span>The world in one day</span><span class="r">40 stories · 9 regions · every one from Saturday 21 November 2026, UTC</span></div>
+<div class="top"><span>The world in one day</span><span class="r">40 stories · 9 regions · 16 fields · every one from Saturday 21 November 2026</span></div>
 
 <div class="mast">
-  <h1 class="cond"><small>World news of the day</small>Saturday 21 November 2026</h1>
+  <h1 class="cond">Saturday 21 November 2026</h1>
   <div class="lede"><b>Iran strikes Bahrain</b> as tankers are hit off Oman. <b>Drones set a Russian ship ablaze</b> off Finland. <b>COP31 runs past its deadline</b> with no deal.</div>
 </div>
 
@@ -112,7 +120,7 @@
       <path d="{{GULF_IRAN}}" fill="#e2d8c4" stroke="#a99f86" stroke-width=".7"/>
       <g id="gulf-marks"></g>
     </svg>
-    <div class="meta"><span class="n">1</span><span class="reg" style="background:var(--me)">Middle East</span>Bahrain · Strait of Hormuz · Riyadh<span class="src">Bahrain Interior Ministry · UKMTO · IRIB · Al Jazeera · Reuters</span></div>
+    <div class="meta"><span class="n" style="background:#b5651d">1</span><span class="reg" style="background:var(--me)">Middle East</span>Bahrain · Hormuz · Riyadh · War<span class="tag t-clm">CLAIMS ATTRIBUTED</span><span class="src">Bahrain Interior Ministry · UKMTO · IRIB · Al Jazeera · Reuters</span></div>
     <h2>Iran strikes Bahrain; two tankers hit off Oman</h2>
     <p>Bahrain says an Iranian attack set a civilian industrial site on fire, with no one hurt. UKMTO says projectiles struck two tankers off Khasab. Iran's Guards say they downed two US drones; Houthi missiles at Riyadh are intercepted.</p>
   </div>
@@ -139,7 +147,7 @@
         <path d="M76 36 Q 110 38 146 46" stroke="var(--red)" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
         <text x="372" y="84" text-anchor="end" class="lbl" style="font-size:10px">Crew evacuated</text>
       </svg>
-      <div class="meta"><span class="n">2</span><span class="reg" style="background:var(--eu)">Europe</span>Gulf of Finland<span class="src">Finnish Border Guard · Reuters · AFP</span></div>
+      <div class="meta"><span class="n" style="background:#2b5fa6">2</span><span class="reg" style="background:var(--eu)">Europe</span>Gulf of Finland<span class="tag t-con">CONFIRMED</span><span class="src">Border Guard · Reuters · AFP</span></div>
       <h2>Drones set a Russian cargo ship ablaze off Finland</h2>
       <p>Sparta II, bound for Kaliningrad, burns off Loviisa; crew evacuated.</p>
     </div>
@@ -160,7 +168,7 @@
         <text x="222" y="58" class="lbl" style="font-size:10.5px">Deadline was Friday</text>
         <text x="222" y="73" class="lbl" style="font-size:10.5px">Antalya, Türkiye</text>
       </svg>
-      <div class="meta"><span class="n">3</span><span class="reg" style="background:var(--gl)">Global</span>COP31 · Antalya<span class="src">Al Jazeera · Reuters</span></div>
+      <div class="meta"><span class="n" style="background:#4a5568">3</span><span class="reg" style="background:var(--gl)">Global</span>COP31 · Climate<span class="tag t-con">CONFIRMED</span><span class="src">Al Jazeera · Reuters</span></div>
       <h2>COP31 runs into overtime, split over fossil fuels</h2>
       <p>Nations attack a draft that drops any mention of fossil fuels.</p>
     </div>
@@ -178,9 +186,9 @@
       <path d="M72 28 Q 84 16 96 26 Q 108 36 118 24" stroke="var(--ink)" stroke-width="2" fill="none"/>
       <text x="95" y="52" text-anchor="middle" class="lbl" style="font-size:10px">Signed in Brussels</text>
     </svg>
-    <div class="meta"><span class="n">4</span>Brussels · Trade<span class="src">EU · Euronews</span></div>
+    <div class="meta"><span class="n" style="background:#2b5fa6">4</span>Brussels · Trade<span class="tag t-off" style="margin-left:auto">OFFICIAL</span></div>
     <h3>EU and Indonesia sign a trade pact</h3>
-    <p>Duties go on 98%+ of tariff lines.</p>
+    <p>Duties go on 98%+ of tariff lines. <em class="s">EU</em></p>
   </div>
 
   <div class="c">
@@ -194,9 +202,9 @@
       <text x="157" y="27" text-anchor="middle" fill="#fff" style="font-size:10.5px;font-weight:800">CAUGHT</text>
       <text x="160" y="48" text-anchor="middle" class="lbl" style="font-size:9.5px">Sinaloa</text>
     </svg>
-    <div class="meta"><span class="n">5</span>Sinaloa · Crime<span class="src">AP · Al Jazeera</span></div>
+    <div class="meta"><span class="n" style="background:#2e7d4f">5</span>Sinaloa · Crime<span class="tag t-con" style="margin-left:auto">CONFIRMED</span></div>
     <h3>Mexico arrests "El Chapo Isidro"</h3>
-    <p>FBI top-10 fugitive held in Guasave.</p>
+    <p>Held in Guasave, Sinaloa. <em class="s">AP</em></p>
   </div>
 
   <div class="c">
@@ -208,9 +216,9 @@
       <text x="132" y="30" text-anchor="middle" style="font-size:22px;font-weight:800;font-family:Bahnschrift" fill="var(--ink)">128</text>
       <text x="132" y="46" text-anchor="middle" class="lbl" style="font-size:9.5px">states · no treaty</text>
     </svg>
-    <div class="meta"><span class="n">6</span>Geneva · Weapons<span class="src">AFP · Al Jazeera</span></div>
+    <div class="meta"><span class="n" style="background:#4a5568">6</span>Geneva · Weapons<span class="tag t-con" style="margin-left:auto">CONFIRMED</span></div>
     <h3>Killer-robot talks end with no treaty</h3>
-    <p>No ban: US, Russia, Israel opposed.</p>
+    <p>No ban: US, Russia, Israel opposed. <em class="s">AFP</em></p>
   </div>
 
   <div class="c">
@@ -222,9 +230,9 @@
       <rect x="108" y="24" width="8" height="8" fill="#e0c068"/><rect x="100" y="27" width="8" height="2" fill="#7fb3ff"/><rect x="116" y="27" width="8" height="2" fill="#7fb3ff"/>
       <text x="160" y="34" text-anchor="middle" fill="#fff" style="font-size:10px;font-weight:700">MERCURY</text>
     </svg>
-    <div class="meta"><span class="n">7</span>Space<span class="src">ESA · AP</span></div>
+    <div class="meta"><span class="n" style="background:#4a5568">7</span>Space<span class="tag t-off" style="margin-left:auto">OFFICIAL</span></div>
     <h3>BepiColombo enters orbit at Mercury</h3>
-    <p>Europe–Japan probe, after 8 years.</p>
+    <p>Europe–Japan probe, after 8 years. <em class="s">ESA</em></p>
   </div>
 
   <div class="c">
@@ -235,9 +243,9 @@
       <text x="46" y="52" text-anchor="middle" class="lbl" style="font-size:10px">M6.7 Peru</text>
       <text x="144" y="52" text-anchor="middle" class="lbl" style="font-size:10px">M6.8 Banda Sea</text>
     </svg>
-    <div class="meta"><span class="n">8</span>Peru · Timor-Leste<span class="src">USGS</span></div>
+    <div class="meta"><span class="n" style="background:#2e7d4f">8</span>Peru · Timor-Leste<span class="tag t-off" style="margin-left:auto">OFFICIAL</span></div>
     <h3>Deep quakes jolt Peru and Banda Sea</h3>
-    <p>M6.7 at 00:09, M6.8 at 09:42 UTC.</p>
+    <p>M6.7 at 00:09, M6.8 at 09:42 UTC. <em class="s">USGS</em></p>
   </div>
 
   <div class="c">
@@ -249,23 +257,23 @@
       <text x="158" y="23" text-anchor="middle" fill="#fff" style="font-size:12px;font-weight:800">24</text>
       <text x="158" y="44" text-anchor="middle" fill="var(--ink)" style="font-size:8px;font-weight:700">bodies found</text>
     </svg>
-    <div class="meta"><span class="n">9</span>Bayelsa, Nigeria<span class="src">NEMA · AP</span></div>
+    <div class="meta"><span class="n" style="background:#8a5a00">9</span>Bayelsa, Nigeria<span class="tag t-off" style="margin-left:auto">OFFICIAL</span></div>
     <h3>Nigeria funeral boat toll rises to 24</h3>
-    <p>Boat sank Friday; count from NEMA.</p>
+    <p>Boat sank Friday; 24 rescued. <em class="s">NEMA</em></p>
   </div>
 
   <div class="c">
     <svg viewBox="0 0 190 60" preserveAspectRatio="xMidYMid slice">
-      <rect width="190" height="60" fill="#f4ebe4"/>
-      <rect x="20" y="30" width="80" height="26" fill="#6b7280"/><rect x="34" y="8" width="10" height="24" fill="#4a5568"/><rect x="58" y="12" width="10" height="20" fill="#4a5568"/>
-      <path d="M70 30 Q 78 6 86 26 Q 90 12 96 30Z" fill="var(--amber)"/><path d="M76 30 Q 80 18 86 30Z" fill="#e85d04"/>
-      <circle cx="90" cy="8" r="8" fill="#4a5568" opacity=".45"/>
-      <text x="148" y="26" text-anchor="middle" style="font-size:20px;font-weight:800;font-family:Bahnschrift" fill="var(--red)">4 dead</text>
-      <text x="148" y="44" text-anchor="middle" class="lbl" style="font-size:9.5px">35 injured</text>
+      <rect width="190" height="60" fill="#161d2e"/>
+      <g stroke="#2c3a55" stroke-width="1"><line x1="0" y1="18" x2="190" y2="18"/><line x1="0" y1="32" x2="190" y2="32"/><line x1="0" y1="46" x2="190" y2="46"/></g>
+      <path d="M6 16 L26 20 L42 18 L58 26 L74 30 L88 44 L96 50 L104 40 L118 34 L132 30 L146 26" stroke="#f2a900" stroke-width="2.4" fill="none"/>
+      <circle cx="96" cy="50" r="3.5" fill="#c8102e" stroke="#fff" stroke-width="1"/>
+      <text x="58" y="51" text-anchor="middle" fill="#fff" style="font-size:9px;font-weight:800">LOW $55,100</text>
+      <circle cx="160" cy="26" r="11" fill="#f2a900"/><text x="160" y="30.5" text-anchor="middle" fill="#161d2e" style="font-size:13px;font-weight:800">₿</text>
     </svg>
-    <div class="meta"><span class="n">10</span>Basra, Iraq<span class="src">INA · Reuters</span></div>
-    <h3>Iraq power-station fire kills four</h3>
-    <p>35 hurt at Hartha plant near Basra.</p>
+    <div class="meta"><span class="n" style="background:#4a5568">10</span>Crypto · Markets<span class="tag t-con" style="margin-left:auto">CONFIRMED</span></div>
+    <h3>Bitcoin hits a two-year low, then rebounds</h3>
+    <p>Lowest since Sept 2024. <em class="s">Coinbase</em></p>
   </div>
 
   <div class="c">
@@ -281,9 +289,9 @@
       <text x="142" y="28" text-anchor="middle" style="font-size:19px;font-weight:800;font-family:Bahnschrift" fill="var(--ink)">82,500</text>
       <text x="142" y="44" text-anchor="middle" class="lbl" style="font-size:9.5px">police count</text>
     </svg>
-    <div class="meta"><span class="n">11</span>France · Protest<span class="src">Interior Ministry · AP</span></div>
+    <div class="meta"><span class="n" style="background:#2b5fa6">11</span>France · Protest<span class="tag t-off" style="margin-left:auto">OFFICIAL</span></div>
     <h3>France marches over living costs</h3>
-    <p>150,000, say organisers.</p>
+    <p>150,000, say organisers. <em class="s">AP</em></p>
   </div>
 
   <div class="c">
@@ -294,9 +302,9 @@
       <text x="118" y="34" text-anchor="middle" style="font-size:28px;font-weight:800;font-family:Bahnschrift" fill="var(--ink)">37–12</text>
       <text x="118" y="51" text-anchor="middle" class="lbl" style="font-size:9.5px">England v New Zealand</text>
     </svg>
-    <div class="meta"><span class="n">12</span>London · Rugby<span class="src">BBC</span></div>
+    <div class="meta"><span class="n" style="background:#2b5fa6">12</span>London · Rugby<span class="tag t-con" style="margin-left:auto">CONFIRMED</span></div>
     <h3>England crush All Blacks 37–12</h3>
-    <p>Their biggest margin in 121 years.</p>
+    <p>Biggest margin in 121 years. <em class="s">BBC</em></p>
   </div>
 
   <div class="c">
@@ -307,9 +315,9 @@
       <text x="124" y="30" text-anchor="middle" style="font-size:22px;font-weight:800;font-family:Bahnschrift" fill="var(--as)">5 awards</text>
       <text x="124" y="46" text-anchor="middle" class="lbl" style="font-size:9.5px">Album of the Year</text>
     </svg>
-    <div class="meta"><span class="n">13</span>Osaka · Music<span class="src">Korea Times</span></div>
+    <div class="meta"><span class="n" style="background:#8e3b8e">13</span>Osaka · Music<span class="tag t-con" style="margin-left:auto">CONFIRMED</span></div>
     <h3>BTS sweep five MAMA awards</h3>
-    <p>Album of the Year for "Arirang".</p>
+    <p>Top album: "Arirang". <em class="s">Korea Times</em></p>
   </div>
 </div>
 
@@ -317,47 +325,48 @@
 <div class="bottom">
   <div>
     <div class="hd">Where it happened <span>numbers match the stories</span></div>
-    <svg id="world" viewBox="0 0 300 138" width="236" height="109">
+    <svg id="world" viewBox="0 0 300 138" width="236" height="96" preserveAspectRatio="xMidYMid slice">
       <rect width="300" height="138" fill="#1d2b47"/>
       <path d="{{WORLD_LAND}}" fill="#4d5d7a"/>
       <g id="pins"></g>
     </svg>
+    <div class="legend"><span class="tag t-off">OFFICIAL</span>on the record <span class="tag t-con">CONFIRMED</span>2+ outlets <span class="tag t-clm">CLAIM</span>one side says</div>
   </div>
   <div>
     <div class="hd">Also on Saturday 21 November <span>27 more stories, by region</span></div>
     <div class="briefs">
-      <div><i>14</i><b>Riyadh</b> Saudis down 3 Houthi missiles <em>AJ</em></div>
-      <div><i>15</i><b>Tehran</b> Qatari mediators in talks, Iran says <em>Tasnim</em></div>
-      <div><i>16</i><b>Gaza City</b> Strike on aid vehicle kills 3 <em>Reuters</em></div>
-      <div><i>17</i><b>Beirut</b> Aoun tells Israel to leave the south <em>AJ</em></div>
-      <div><i>18</i><b>Hormuz</b> Long swim highlights war damage <em>BBC</em></div>
-      <div><i>19</i><b>Kyiv</b> UK's Streeting meets Zelensky <em>BBC</em></div>
-      <div><i>20</i><b>Lisbon</b> Unions march for pay and pensions <em>Reuters</em></div>
-      <div><i>21</i><b>Newcastle</b> Arsenal held 2–2, still six clear <em>AJ</em></div>
-      <div><i>22</i><b>London</b> Leeds win 4–1 at Chelsea <em>AJ</em></div>
-      <div><i>23</i><b>Manchester</b> City draw 1–1 with Fulham <em>AJ</em></div>
-      <div><i>24</i><b>Rugby</b> Ireland edge South Africa 20–17 <em>BBC</em></div>
-      <div><i>25</i><b>Brasília</b> Bolsonaro, 71, in intensive care <em>AJ</em></div>
-      <div><i>26</i><b>Washington</b> Trump: FBI hack "not good" <em>Fox</em></div>
-      <div><i>27</i><b>Florida</b> Guard rescues as rain floods streets <em>AJ</em></div>
-      <div><i>28</i><b>S. Mexico</b> 300 migrants set off for the US <em>AJ</em></div>
-      <div><i>29</i><b>Las Vegas</b> Verstappen on pole after penalty <em>AJ</em></div>
-      <div><i>30</i><b>Savar</b> 80 garment plants shut over pay <em>Star</em></div>
-      <div><i>31</i><b>Pabna</b> BNP and Awami League clash <em>UNB</em></div>
-      <div><i>32</i><b>Bangladesh</b> 90 border-guard platoons out <em>Tribune</em></div>
-      <div><i>33</i><b>Banten</b> Factory fire: 3 dead, 36 missing <em>Reuters</em></div>
-      <div><i>34</i><b>N. Sumatra</b> Train hits minibus; 3 crew hurt <em>AJ</em></div>
-      <div><i>35</i><b>Qinghai</b> M5.9 quake at 10:45 UTC <em>USGS</em></div>
-      <div><i>36</i><b>Tokyo</b> Saudis to triple oil kept in Japan <em>METI</em></div>
-      <div><i>37</i><b>Wellington</b> India 486-4, lead NZ by 118 <em>ICC</em></div>
-      <div><i>38</i><b>Australia</b> Hosts win T20 opener v England <em>BBC</em></div>
-      <div><i>39</i><b>Cricket</b> Australia keeps Cummins captain <em>BBC</em></div>
-      <div><i>40</i><b>Football</b> CAF's Motsepe backs Infantino <em>AJ</em></div>
+      <div><i style="color:#b5651d">14</i><b>Riyadh</b> Saudis down 3 Houthi missiles <em>AJ</em></div>
+      <div><i style="color:#b5651d">15</i><b>Tehran</b> Qatari mediators in talks, Iran says <em>Tasnim</em></div>
+      <div><i style="color:#b5651d">16</i><b>Gaza City</b> Strike on aid vehicle kills 3 <em>Reuters</em></div>
+      <div><i style="color:#b5651d">17</i><b>Beirut</b> Aoun tells Israel to leave the south <em>AJ</em></div>
+      <div><i style="color:#b5651d">18</i><b>Basra</b> Power-station fire kills 4, hurts 35 <em>INA</em></div>
+      <div><i style="color:#2b5fa6">19</i><b>Kyiv</b> UK's Streeting meets Zelensky <em>BBC</em></div>
+      <div><i style="color:#2b5fa6">20</i><b>Lisbon</b> Unions march for pay and pensions <em>Reuters</em></div>
+      <div><i style="color:#2b5fa6">21</i><b>Turin</b> Alcaraz beats Shelton, reaches final <em>ATP</em></div>
+      <div><i style="color:#2b5fa6">22</i><b>Newcastle</b> Arsenal held 2–2, still six clear <em>AJ</em></div>
+      <div><i style="color:#2b5fa6">23</i><b>London</b> Leeds win 4–1 at Chelsea <em>AJ</em></div>
+      <div><i style="color:#2b5fa6">24</i><b>Rugby</b> Ireland edge South Africa 20–17 <em>BBC</em></div>
+      <div><i style="color:#2e7d4f">25</i><b>Brasília</b> Bolsonaro, 71, in intensive care <em>AJ</em></div>
+      <div><i style="color:#2e7d4f">26</i><b>Washington</b> Trump: FBI hack "not good" <em>Fox</em></div>
+      <div><i style="color:#2e7d4f">27</i><b>Brazil</b> Bred mosquitoes cut dengue 69% <em>AP</em></div>
+      <div><i style="color:#2e7d4f">28</i><b>Florida</b> Guard rescues as rain floods streets <em>AJ</em></div>
+      <div><i style="color:#2e7d4f">29</i><b>S. Mexico</b> 300 migrants set off for the US <em>AJ</em></div>
+      <div><i style="color:#2e7d4f">30</i><b>Las Vegas</b> Verstappen on pole after penalty <em>AJ</em></div>
+      <div><i style="color:#a23b5a">31</i><b>Savar</b> 80 garment plants shut over pay <em>Star</em></div>
+      <div><i style="color:#a23b5a">32</i><b>Pabna</b> BNP and Awami League clash <em>UNB</em></div>
+      <div><i style="color:#a23b5a">33</i><b>Dhaka</b> 90 border-guard platoons out <em>Tribune</em></div>
+      <div><i style="color:#6a4fb3">34</i><b>Banten</b> Factory fire: 3 dead, 36 missing <em>Reuters</em></div>
+      <div><i style="color:#6a4fb3">35</i><b>N. Sumatra</b> Train hits minibus; 3 crew hurt <em>AJ</em></div>
+      <div><i style="color:#8e3b8e">36</i><b>Qinghai</b> M5.9 quake at 10:45 UTC <em>USGS</em></div>
+      <div><i style="color:#8e3b8e">37</i><b>Tokyo</b> Saudis to triple oil kept in Japan <em>METI</em></div>
+      <div><i style="color:#0f7f86">38</i><b>Wellington</b> India 486-4, lead NZ by 118 <em>ICC</em></div>
+      <div><i style="color:#0f7f86">39</i><b>Australia</b> Hosts win T20 opener v England <em>BBC</em></div>
+      <div><i style="color:#8a5a00">40</i><b>Football</b> CAF's Motsepe backs Infantino <em>AJ</em></div>
     </div>
   </div>
 </div>
-<div class="check"><b>Date check.</b> Left out because they were first reported before Saturday: Denmark's expulsion of Russia's defence attaché and the claimed Riemann Hypothesis proof (Fri 20), Manipur's toxic-liquor deaths and the Kryvyi Rih strike (Fri night), the Trump–Xi–Putin meeting (Thu 19). Also out: Harry Kane's injury (Fri) and the Hebron demolition notices (Sun 15). Not yet: COP31's closing session and the Las Vegas race (Sun 22).</div>
-<div class="foot"><span>Every story here happened, or was first reported, on Saturday 21 November 2026. Tolls are officials' counts; claims are attributed.</span><span>Sources beside each story · all drawings original</span></div>
+<div class="check"><b>Date check.</b> Every story is from Saturday 21 November in some time zone; clock times are UTC. <b>Friday 20, left out:</b> Russian missiles in Poland, the Kyiv bridges strike, Wall Street's AI sell-off, Cyclone Akvan, Denmark expelling Russia's attaché, the Riemann proof claim, Harry Kane's injury. <b>Thu 19:</b> Trump–Xi–Putin meeting. <b>Not yet:</b> COP31's close, the Las Vegas race (Sun 22).</div>
+<div class="foot"><span>Every story here happened, or was first reported, on Saturday 21 November 2026. Tolls are officials' counts; claims are attributed.</span><span>Pictures and maps drawn in code, not photographs · sources beside each story</span></div>
 
 <script>
   const NS = 'http://www.w3.org/2000/svg';
@@ -413,7 +422,7 @@
 
   // world pins
   const pg = document.getElementById('pins');
-  const order = ['13', '8b', '8', '9', '5', '12', '4', '11', '6', '2', '3', '10', '1'];
+  const order = ['13', '8b', '8', '9', '5', '12', '4', '11', '6', '2', '3', '1'];
   for (const k of order) {
     const [x, y] = W[k];
     el('circle', { cx: x, cy: y, r: 6.2, fill: '#c8102e', stroke: '#fff', 'stroke-width': 1 }, pg);
@@ -438,8 +447,8 @@
   }
 
   // region strip, counted from the stories above
-  const regions = [['Europe', 10, '#2b5fa6'], ['Middle East', 7, '#b5651d'], ['Americas', 7, '#2e7d4f'], ['South Asia', 3, '#a23b5a'],
-    ['East Asia', 3, '#8e3b8e'], ['Oceania', 3, '#0f7f86'], ['Global', 3, '#4a5568'], ['SE Asia', 2, '#6a4fb3'], ['Africa', 2, '#8a5a00']];
+  const regions = [['Europe', 10, '#2b5fa6'], ['Americas', 8, '#2e7d4f'], ['Middle East', 6, '#b5651d'], ['Global', 4, '#4a5568'],
+    ['South Asia', 3, '#a23b5a'], ['East Asia', 3, '#8e3b8e'], ['SE Asia', 2, '#6a4fb3'], ['Oceania', 2, '#0f7f86'], ['Africa', 2, '#8a5a00']];
   const strip = document.getElementById('regions');
   for (const [name, n, c] of regions) {
     const s = document.createElement('span');
