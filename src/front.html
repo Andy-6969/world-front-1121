@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -11,7 +11,7 @@
 -->
 <style>
   :root {
-    --ink: #13203a; --paper: #eef1f4; --card: #ffffff; --red: #c8102e; --sea: #cfe0ee;
+    --ink: #13203a; --paper: #f4ecda; --card: #fcf7eb; --red: #c8102e; --sea: #cfe0ee;
     --land: #e9e4d6; --muted: #4a5568; --rule: #13203a; --amber: #f2a900;
     --me: #b5651d; --eu: #2b5fa6; --am: #2e7d4f; --af: #8a5a00; --as: #8e3b8e; --oc: #0f7f86; --gl: #4a5568;
   }
@@ -76,12 +76,12 @@
   .bottom { display: grid; grid-template-columns: 236px 1fr; gap: 12px; border-top: 2px solid var(--rule); padding-top: 4px; }
   .hd { font-family: "Bahnschrift", sans-serif; font-weight: 700; font-size: 13px; margin-bottom: 2px; }
   .hd span { font-family: "Segoe UI"; font-weight: 400; font-size: 10px; color: var(--muted); }
-  .briefs { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: repeat(9, auto); grid-auto-flow: column; column-gap: 12px; }
-  .briefs div { font-size: 10.2px; line-height: 1.28; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+  .briefs { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 12px; }
+  .briefs div { font-size: 10.3px; line-height: 1.36; white-space: nowrap; overflow: hidden; text-overflow: clip; }
   .briefs i { font-style: normal; display: inline-block; width: 17px; font-weight: 800; color: var(--red); }
   .briefs b { font-weight: 700; }
   .briefs em { font-style: normal; color: #6b7280; font-size: 9px; }
-  .check { margin-top: 5px; border: 1.5px solid var(--red); background: #fff; padding: 3px 7px; font-size: 10px; line-height: 1.3; }
+  .check { margin-top: 5px; border: 1.5px solid var(--red); background: var(--card); padding: 3px 7px; font-size: 10px; line-height: 1.3; }
   .check b { color: var(--red); }
   .foot { display: flex; justify-content: space-between; font-size: 9px; color: var(--muted); margin-top: 3px; }
   svg text { font-family: "Segoe UI", Arial, sans-serif; }
@@ -90,7 +90,7 @@
 </head>
 <body>
 
-<div class="top"><span>The world in one day</span><span class="r">40 stories · 9 regions · 16 fields · every one from Saturday 21 November 2026</span></div>
+<div class="top"><span>The world in one day</span><span class="r">37 stories · 9 regions · 16 fields · every one from Saturday 21 November 2026</span></div>
 
 <div class="mast">
   <h1 class="cond">Saturday 21 November 2026</h1>
@@ -333,35 +333,32 @@
     <div class="legend"><span class="tag t-off">OFFICIAL</span>on the record <span class="tag t-con">CONFIRMED</span>2+ outlets <span class="tag t-clm">CLAIM</span>one side says</div>
   </div>
   <div>
-    <div class="hd">Also on Saturday 21 November <span>27 more stories, by region</span></div>
+    <div class="hd">Also on Saturday 21 November <span>24 more stories, by region</span></div>
     <div class="briefs">
       <div><i style="color:#b5651d">14</i><b>Riyadh</b> Saudis down 3 Houthi missiles <em>AJ</em></div>
-      <div><i style="color:#b5651d">15</i><b>Tehran</b> Qatari mediators in talks, Iran says <em>Tasnim</em></div>
+      <div><i style="color:#b5651d">15</i><b>Tehran</b> Iran says it held talks with Qatar <em>Tasnim</em></div>
       <div><i style="color:#b5651d">16</i><b>Gaza City</b> Strike on aid vehicle kills 3 <em>Reuters</em></div>
       <div><i style="color:#b5651d">17</i><b>Beirut</b> Aoun tells Israel to leave the south <em>AJ</em></div>
       <div><i style="color:#b5651d">18</i><b>Basra</b> Power-station fire kills 4, hurts 35 <em>INA</em></div>
       <div><i style="color:#2b5fa6">19</i><b>Kyiv</b> UK's Streeting meets Zelensky <em>BBC</em></div>
-      <div><i style="color:#2b5fa6">20</i><b>Lisbon</b> Unions march for pay and pensions <em>Reuters</em></div>
+      <div><i style="color:#2b5fa6">20</i><b>Lisbon</b> Unions march for pay, pensions <em>Reuters</em></div>
       <div><i style="color:#2b5fa6">21</i><b>Turin</b> Alcaraz beats Shelton, reaches final <em>ATP</em></div>
       <div><i style="color:#2b5fa6">22</i><b>Newcastle</b> Arsenal held 2–2, still six clear <em>AJ</em></div>
-      <div><i style="color:#2b5fa6">23</i><b>London</b> Leeds win 4–1 at Chelsea <em>AJ</em></div>
-      <div><i style="color:#2b5fa6">24</i><b>Rugby</b> Ireland edge South Africa 20–17 <em>BBC</em></div>
-      <div><i style="color:#2e7d4f">25</i><b>Brasília</b> Bolsonaro, 71, in intensive care <em>AJ</em></div>
-      <div><i style="color:#2e7d4f">26</i><b>Washington</b> Trump: FBI hack "not good" <em>Fox</em></div>
-      <div><i style="color:#2e7d4f">27</i><b>Brazil</b> Bred mosquitoes cut dengue 69% <em>AP</em></div>
-      <div><i style="color:#2e7d4f">28</i><b>Florida</b> Guard rescues as rain floods streets <em>AJ</em></div>
-      <div><i style="color:#2e7d4f">29</i><b>S. Mexico</b> 300 migrants set off for the US <em>AJ</em></div>
-      <div><i style="color:#2e7d4f">30</i><b>Las Vegas</b> Verstappen on pole after penalty <em>AJ</em></div>
-      <div><i style="color:#a23b5a">31</i><b>Savar</b> 80 garment plants shut over pay <em>Star</em></div>
-      <div><i style="color:#a23b5a">32</i><b>Pabna</b> BNP and Awami League clash <em>UNB</em></div>
-      <div><i style="color:#a23b5a">33</i><b>Dhaka</b> 90 border-guard platoons out <em>Tribune</em></div>
-      <div><i style="color:#6a4fb3">34</i><b>Banten</b> Factory fire: 3 dead, 36 missing <em>Reuters</em></div>
-      <div><i style="color:#6a4fb3">35</i><b>N. Sumatra</b> Train hits minibus; 3 crew hurt <em>AJ</em></div>
-      <div><i style="color:#8e3b8e">36</i><b>Qinghai</b> M5.9 quake at 10:45 UTC <em>USGS</em></div>
-      <div><i style="color:#8e3b8e">37</i><b>Tokyo</b> Saudis to triple oil kept in Japan <em>METI</em></div>
-      <div><i style="color:#0f7f86">38</i><b>Wellington</b> India 486-4, lead NZ by 118 <em>ICC</em></div>
-      <div><i style="color:#0f7f86">39</i><b>Australia</b> Hosts win T20 opener v England <em>BBC</em></div>
-      <div><i style="color:#8a5a00">40</i><b>Football</b> CAF's Motsepe backs Infantino <em>AJ</em></div>
+      <div><i style="color:#2b5fa6">23</i><b>Rugby</b> Ireland edge South Africa 20–17 <em>BBC</em></div>
+      <div><i style="color:#2e7d4f">24</i><b>Brasília</b> Bolsonaro, 71, in intensive care <em>AJ</em></div>
+      <div><i style="color:#2e7d4f">25</i><b>Washington</b> Trump: FBI hack "not good" <em>Fox</em></div>
+      <div><i style="color:#2e7d4f">26</i><b>Brazil</b> Bred mosquitoes cut dengue 69% <em>AP</em></div>
+      <div><i style="color:#2e7d4f">27</i><b>Florida</b> Guard rescues as rain floods streets <em>AJ</em></div>
+      <div><i style="color:#2e7d4f">28</i><b>Las Vegas</b> Verstappen on pole after penalty <em>AJ</em></div>
+      <div><i style="color:#a23b5a">29</i><b>Savar</b> 80 garment plants shut over pay <em>Star</em></div>
+      <div><i style="color:#a23b5a">30</i><b>Pabna</b> BNP and Awami League clash <em>UNB</em></div>
+      <div><i style="color:#6a4fb3">31</i><b>Banten</b> Factory fire: 3 dead, 36 missing <em>Reuters</em></div>
+      <div><i style="color:#6a4fb3">32</i><b>N. Sumatra</b> Train hits minibus; 3 crew hurt <em>AJ</em></div>
+      <div><i style="color:#8e3b8e">33</i><b>Qinghai</b> M5.9 quake at 10:45 UTC <em>USGS</em></div>
+      <div><i style="color:#8e3b8e">34</i><b>Tokyo</b> Saudis to triple oil kept in Japan <em>METI</em></div>
+      <div><i style="color:#0f7f86">35</i><b>Wellington</b> India 486-4, lead NZ by 118 <em>ICC</em></div>
+      <div><i style="color:#0f7f86">36</i><b>Australia</b> Hosts win T20 opener v England <em>BBC</em></div>
+      <div><i style="color:#8a5a00">37</i><b>Football</b> CAF's Motsepe backs Infantino <em>AJ</em></div>
     </div>
   </div>
 </div>
@@ -447,8 +444,8 @@
   }
 
   // region strip, counted from the stories above
-  const regions = [['Europe', 10, '#2b5fa6'], ['Americas', 8, '#2e7d4f'], ['Middle East', 6, '#b5651d'], ['Global', 4, '#4a5568'],
-    ['South Asia', 3, '#a23b5a'], ['East Asia', 3, '#8e3b8e'], ['SE Asia', 2, '#6a4fb3'], ['Oceania', 2, '#0f7f86'], ['Africa', 2, '#8a5a00']];
+  const regions = [['Europe', 9, '#2b5fa6'], ['Americas', 7, '#2e7d4f'], ['Middle East', 6, '#b5651d'], ['Global', 4, '#4a5568'],
+    ['South Asia', 2, '#a23b5a'], ['East Asia', 3, '#8e3b8e'], ['SE Asia', 2, '#6a4fb3'], ['Oceania', 2, '#0f7f86'], ['Africa', 2, '#8a5a00']];
   const strip = document.getElementById('regions');
   for (const [name, n, c] of regions) {
     const s = document.createElement('span');
