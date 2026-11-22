@@ -72,7 +72,7 @@ def main():
     world_d = path_for(land, world, (ww, wh), 0.9)
 
     # Gulf map box, must match the 'gulf' svg viewBox in src/front.html
-    gw, gh = 600, 222
+    gw, gh = 600, 200
     k = math.cos(math.radians(26.3))
     s = gw / ((60.2 - 44.6) * k)
     top = 26.3 + gh / s / 2
